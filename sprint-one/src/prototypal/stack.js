@@ -1,13 +1,3 @@
-// {}
-// push(a) // {0:a}
-// push(b) //  {0:a, 1 : b} size =2
-// pop     // {0:a, 1:b} size = 1 // return 1:b
-// pop //  {0:a, 1:b, 2:c, 3:d, 4:e} size = 0 // 0 : a
-// push( c) //
-//
-
-
-
 var stackMethods = {
   size: function() {
     return this.stackSize >= 0 ? this.stackSize : 0;
@@ -19,6 +9,7 @@ var stackMethods = {
   pop: function() {
     this.stackSize--;
     this.offSet++;
+
     return this.storage[this.stackSize];
   }
 };
@@ -29,7 +20,6 @@ var Stack = function() {
   newStack.offSet=0;
   newStack.storage = {};
 
-
   // var testClosure='found';
   // newStack.findClosure = function () {
   //   console.log('closure lookup = ',testClosure);
@@ -38,9 +28,12 @@ var Stack = function() {
   return newStack;
 };
 
+var stackInstance = Stack();
 
-
-var stackInstance=Stack();
-console.log(stackInstance.size)
-
-
+// {}
+// push(a) // {0:a}
+// push(b) //  {0:a, 1 : b} size =2
+// pop     // {0:a, 1:b} size = 1 // return 1:b
+// pop //  {0:a, 1:b, 2:c, 3:d, 4:e} size = 0 // 0 : a
+// push( c) //
+//

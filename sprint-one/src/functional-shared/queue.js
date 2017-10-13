@@ -21,7 +21,6 @@ var extend = function(to, from) {
 };
 
 var queueMethods = {
-
 };
 
 queueMethods.enqueue = function (value) {
